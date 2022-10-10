@@ -10,8 +10,11 @@ public class CarShowroom {
         Transport = transport;
     }
 
-    public long getId() {
-        return id;
+    public CarShowroom(long id, long buyer, String transport, String vin) {
+    }
+
+    public int getId() {
+        return (int) id;
     }
 
     public void setId(long id) {
@@ -33,8 +36,4 @@ public class CarShowroom {
     public void setTransport(String transport) {
         Transport = transport;
     }
-
-
-
-
 }
