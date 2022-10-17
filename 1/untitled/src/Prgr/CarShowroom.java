@@ -3,20 +3,17 @@ package Prgr;
 //автосалон
 public class CarShowroom {
     private long id;
-    private long Buyer;
-    private String Transport;
+    private long buyer;
+    private String transport;
 
     public CarShowroom(long id, long buyer, String transport) {
         this.id = id;
-        Buyer = buyer;
-        Transport = transport;
+        this.buyer = buyer;
+        this.transport = transport;
     }
 
-    public CarShowroom(long id, long buyer, String transport, String vin) {
-    }
-
-    public int getId() {
-        return (int) id;
+    public long getId() {
+        return id;
     }
 
     public void setId(long id) {
@@ -24,18 +21,18 @@ public class CarShowroom {
     }
 
     public long getBuyer() {
-        return Buyer;
+        return buyer;
     }
 
     public void setBuyer(long buyer) {
-        Buyer = buyer;
+        this.buyer = buyer;
     }
 
     public String getTransport() {
-        return Transport;
+        return transport;
     }
 
     public void setTransport(String transport) {
-        Transport = transport;
+        this.transport = transport;
     }
 }

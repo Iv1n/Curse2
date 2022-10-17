@@ -5,7 +5,7 @@ public class ConfigsBuyer {
     protected String dbPort = "3306";
     protected String dbUser = "root";
     protected String dbPass = "root";
-    protected String dbName = "people";
+    protected String dbName = "people_buyer";
 
 }
 

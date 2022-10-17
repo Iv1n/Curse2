@@ -1,6 +1,7 @@
 package Prgr;
 import DB.DataBaseHandlerBuyer;
-
+import DB.ConstBuyer;
+import DB.ConfigsBuyer;
 /*
 Автосалон.
 Требуется создать приложение с помощью которого возможно будет:
@@ -13,7 +14,10 @@ import DB.DataBaseHandlerBuyer;
  */
 public class Main {
     public static void main(String[] args) {
-        DataBaseHandlerBuyer dataBaseHandlerPeople = new DataBaseHandlerBuyer();
+        DataBaseHandlerBuyer dbBuyer = new DataBaseHandlerBuyer();
+        Buyer buyer = new Buyer(Person.gender.male,"Bobus","Auir","2000.01.10",
+                "+799999999999","2","2");
 
+        dbBuyer.signUpUser(buyer);
     }
 }
