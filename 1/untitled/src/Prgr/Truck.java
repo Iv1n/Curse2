@@ -38,5 +38,55 @@ public class Truck extends Transport {
     public void setModelTruck(Truck.modelTruck modelTruck) {
         this.modelTruck = modelTruck;
     }
+
+    @Override
+    public String getBrand() {
+        return super.getBrand();
+    }
+
+    @Override
+    public void setBrand(String brand) {
+        super.setBrand(brand);
+    }
+
+    @Override
+    public String getModel() {
+        return super.getModel();
+    }
+
+    @Override
+    public void setModel(String model) {
+        super.setModel(model);
+    }
+
+    @Override
+    public String getVin() {
+        return super.getVin();
+    }
+
+    @Override
+    public void setVin(String vin) {
+        super.setVin(vin);
+    }
+
+    @Override
+    public String getDateOfmMnufacture() {
+        return super.getDateOfmMnufacture();
+    }
+
+    @Override
+    public void setDateOfmMnufacture(String dateOfmMnufacture) {
+        super.setDateOfmMnufacture(dateOfmMnufacture);
+    }
+
+    @Override
+    public int getPrise() {
+        return super.getPrise();
+    }
+
+    @Override
+    public void setPrise(int prise) {
+        super.setPrise(prise);
+    }
 }
 

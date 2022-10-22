@@ -1,29 +1,21 @@
 package Prgr;
 
-public class Person {
-enum gender{
-    male,
-female
-}
-    private gender gender;
-    private String first_name,middle_name, last_name,birth, phone_number,id;
+import java.lang.constant.Constable;
 
-    public Person(Person.gender gender, String first_name, String middle_name, String last_name, String birth, String phone_number, String id) {
-        this.gender = gender;
+public class Person {
+
+
+private String first_name,middle_name, last_name,birth, phone_number,gender;
+private int id;
+
+    public Person(String first_name, String middle_name, String last_name, String birth, String phone_number, String gender, int id) {
         this.first_name = first_name;
         this.middle_name = middle_name;
         this.last_name = last_name;
         this.birth = birth;
         this.phone_number = phone_number;
-        this.id = id;
-    }
-
-    public Person.gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Person.gender gender) {
         this.gender = gender;
+        this.id = id;
     }
 
     public String getFirst_name() {
@@ -66,11 +58,19 @@ female
         this.phone_number = phone_number;
     }
 
-    public String getId() {
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 }

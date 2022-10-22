@@ -1,19 +1,8 @@
 package Prgr;
 
 public class Buyer extends Person {
-
-    public Buyer(Person.gender gender, String first_name, String middle_name, String last_name, String birth, String phone_number, String id) {
-        super(gender, first_name, middle_name, last_name, birth, phone_number, id);
-    }
-
-    @Override
-    public Person.gender getGender() {
-        return super.getGender();
-    }
-
-    @Override
-    public void setGender(Person.gender gender) {
-        super.setGender(gender);
+    public Buyer(String first_name, String middle_name, String last_name, String birth, String phone_number, String gender, int id) {
+        super(first_name, middle_name, last_name, birth, phone_number, gender, id);
     }
 
     @Override
@@ -67,12 +56,22 @@ public class Buyer extends Person {
     }
 
     @Override
-    public String getId() {
+    public String getGender() {
+        return super.getGender();
+    }
+
+    @Override
+    public void setGender(String gender) {
+        super.setGender(gender);
+    }
+
+    @Override
+    public int getId() {
         return super.getId();
     }
 
     @Override
-    public void setId(String id) {
+    public void setId(int id) {
         super.setId(id);
     }
 }

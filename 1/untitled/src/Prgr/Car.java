@@ -41,4 +41,58 @@ private modelCar modelCar;
     public void setBrandCar(Car.brandCar brandCar) {
         this.brandCar = brandCar;
     }
+
+    public Car(long id, long buyer, String transport, String brand, String model, String vin, String dateOfmMnufacture, int prise) {
+        super(id, buyer, transport, brand, model, vin, dateOfmMnufacture, prise);
+    }
+
+    @Override
+    public String getBrand() {
+        return super.getBrand();
+    }
+
+    @Override
+    public void setBrand(String brand) {
+        super.setBrand(brand);
+    }
+
+    @Override
+    public String getModel() {
+        return super.getModel();
+    }
+
+    @Override
+    public void setModel(String model) {
+        super.setModel(model);
+    }
+
+    @Override
+    public String getVin() {
+        return super.getVin();
+    }
+
+    @Override
+    public void setVin(String vin) {
+        super.setVin(vin);
+    }
+
+    @Override
+    public String getDateOfmMnufacture() {
+        return super.getDateOfmMnufacture();
+    }
+
+    @Override
+    public void setDateOfmMnufacture(String dateOfmMnufacture) {
+        super.setDateOfmMnufacture(dateOfmMnufacture);
+    }
+
+    @Override
+    public int getPrise() {
+        return super.getPrise();
+    }
+
+    @Override
+    public void setPrise(int prise) {
+        super.setPrise(prise);
+    }
 }
