@@ -18,10 +18,10 @@ enum brandCar{
     Volkswagen
 }
 private modelCar modelCar;
-    private brandCar brandCar;
+private brandCar brandCar;
 
-    public Car(long id, long buyer, String transport, String brand, String model, String vin, String dateOfmMnufacture, int prise, Car.modelCar modelCar, Car.brandCar brandCar) {
-        super(id, buyer, transport, brand, model, vin, dateOfmMnufacture, prise);
+    public Car(String vin, String dateOfmMnufacture, int prise, int id_owner, int id, Car.modelCar modelCar, Car.brandCar brandCar) {
+        super(vin, dateOfmMnufacture, prise, id_owner, id);
         this.modelCar = modelCar;
         this.brandCar = brandCar;
     }
@@ -40,30 +40,6 @@ private modelCar modelCar;
 
     public void setBrandCar(Car.brandCar brandCar) {
         this.brandCar = brandCar;
-    }
-
-    public Car(long id, long buyer, String transport, String brand, String model, String vin, String dateOfmMnufacture, int prise) {
-        super(id, buyer, transport, brand, model, vin, dateOfmMnufacture, prise);
-    }
-
-    @Override
-    public String getBrand() {
-        return super.getBrand();
-    }
-
-    @Override
-    public void setBrand(String brand) {
-        super.setBrand(brand);
-    }
-
-    @Override
-    public String getModel() {
-        return super.getModel();
-    }
-
-    @Override
-    public void setModel(String model) {
-        super.setModel(model);
     }
 
     @Override
@@ -94,5 +70,25 @@ private modelCar modelCar;
     @Override
     public void setPrise(int prise) {
         super.setPrise(prise);
+    }
+
+    @Override
+    public int getId_owner() {
+        return super.getId_owner();
+    }
+
+    @Override
+    public void setId_owner(int id_owner) {
+        super.setId_owner(id_owner);
+    }
+
+    @Override
+    public int getId() {
+        return super.getId();
+    }
+
+    @Override
+    public void setId(int id) {
+        super.setId(id);
     }
 }

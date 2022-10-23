@@ -1,11 +1,12 @@
 package Prgr;
 
 public class Truck extends Transport {
-    enum brandTruck{
+    enum brandTruck {
         Volvo,
         Scania
     }
-    enum modelTruck{
+
+    enum modelTruck {
         FH16,
         FH,
         FM,
@@ -14,11 +15,12 @@ public class Truck extends Transport {
         Interlink,
         OmniLink,
     }
+
     private brandTruck brandTruck;
     private modelTruck modelTruck;
 
-    public Truck(long id, long buyer, String transport, String brand, String model, String vin, String dateOfmMnufacture, int prise, Truck.brandTruck brandTruck, Truck.modelTruck modelTruck) {
-        super(id, buyer, transport, brand, model, vin, dateOfmMnufacture, prise);
+    public Truck(String vin, String dateOfmMnufacture, int prise, int id_owner, int id, Truck.brandTruck brandTruck, Truck.modelTruck modelTruck) {
+        super(vin, dateOfmMnufacture, prise, id_owner, id);
         this.brandTruck = brandTruck;
         this.modelTruck = modelTruck;
     }
@@ -39,24 +41,8 @@ public class Truck extends Transport {
         this.modelTruck = modelTruck;
     }
 
-    @Override
-    public String getBrand() {
-        return super.getBrand();
-    }
-
-    @Override
-    public void setBrand(String brand) {
-        super.setBrand(brand);
-    }
-
-    @Override
-    public String getModel() {
-        return super.getModel();
-    }
-
-    @Override
-    public void setModel(String model) {
-        super.setModel(model);
+    public Truck(String vin, String dateOfmMnufacture, int prise, int id_owner, int id) {
+        super(vin, dateOfmMnufacture, prise, id_owner, id);
     }
 
     @Override
@@ -87,6 +73,26 @@ public class Truck extends Transport {
     @Override
     public void setPrise(int prise) {
         super.setPrise(prise);
+    }
+
+    @Override
+    public int getId_owner() {
+        return super.getId_owner();
+    }
+
+    @Override
+    public void setId_owner(int id_owner) {
+        super.setId_owner(id_owner);
+    }
+
+    @Override
+    public int getId() {
+        return super.getId();
+    }
+
+    @Override
+    public void setId(int id) {
+        super.setId(id);
     }
 }
 

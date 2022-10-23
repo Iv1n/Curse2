@@ -1,32 +1,15 @@
 package Prgr;
 
-public abstract class Transport extends CarShowroom {
-    String brand,model,vin,dateOfmMnufacture;
-    int prise;
+public abstract class Transport{
+    String vin,dateOfmMnufacture;
+    int prise, id_owner,id;
 
-    public Transport(long id, long buyer, String transport, String brand, String model,
-                     String vin, String dateOfmMnufacture, int prise) {
-        super(id, buyer, transport);
-        this.brand = brand;
-        this.model = model;
+    public Transport(String vin, String dateOfmMnufacture, int prise, int id_owner, int id) {
         this.vin = vin;
         this.dateOfmMnufacture = dateOfmMnufacture;
         this.prise = prise;
-    }
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
+        this.id_owner = id_owner;
+        this.id = id;
     }
 
     public String getVin() {
@@ -51,5 +34,21 @@ public abstract class Transport extends CarShowroom {
 
     public void setPrise(int prise) {
         this.prise = prise;
+    }
+
+    public int getId_owner() {
+        return id_owner;
+    }
+
+    public void setId_owner(int id_owner) {
+        this.id_owner = id_owner;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -1,5 +1,6 @@
 package Prgr;
 import DB.DataBaseHandlerPerson;
+import DB.DataBaseHandlerTransport;
 
 /*
 Автосалон.
@@ -14,11 +15,11 @@ import DB.DataBaseHandlerPerson;
 public class Main {
     public static void main(String[] args) {
         DataBaseHandlerPerson dbBuyer = new DataBaseHandlerPerson();
-     Buyer buyer = new Buyer("oleg","doo","ffff","2000.01.01","+5555555","adsasd",11);
+     Buyer buyer = new Buyer("oleg","doo","ffff","2000.01.01","+5555555","adsasd",16);
      dbBuyer.signUpUserB(buyer);
 
      DataBaseHandlerPerson dbEmployee = new DataBaseHandlerPerson();
-     Employee employee = new Employee("Dmitry","Olegin","Bobov","2008.01.01","+56464645","pop",10);
+     Employee employee = new Employee("Dmitry","Olegin","Bobov","2008.01.01","+56464645","pop",15);
      dbEmployee.signUpUserE(employee);
 
 
@@ -26,8 +27,8 @@ public class Main {
      System.out.println("");
      dbEmployee.ConclusionOfEmployee();
 
+     DataBaseHandlerTransport dbCar = new DataBaseHandlerTransport();
+     Car car= new Car("123456","2000.01.01",450000,5,3, Car.modelCar.e30, Car.brandCar.BMW);
+        dbCar.addCar(car);
     }
-
-
-
 }
