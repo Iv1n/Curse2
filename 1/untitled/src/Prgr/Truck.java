@@ -41,10 +41,6 @@ public class Truck extends Transport {
         this.modelTruck = modelTruck;
     }
 
-    public Truck(String vin, String dateOfmMnufacture, int prise, int id_owner, int id) {
-        super(vin, dateOfmMnufacture, prise, id_owner, id);
-    }
-
     @Override
     public String getVin() {
         return super.getVin();
