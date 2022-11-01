@@ -4,12 +4,11 @@ public abstract class Transport{
     String vin,dateOfmMnufacture;
     int prise, id_owner,id;
 
-    public Transport(String vin, String dateOfmMnufacture, int prise, int id_owner, int id) {
+    public Transport(String vin, String dateOfmMnufacture, int prise, int id_owner) {
         this.vin = vin;
         this.dateOfmMnufacture = dateOfmMnufacture;
         this.prise = prise;
         this.id_owner = id_owner;
-        this.id = id;
     }
 
     public String getVin() {

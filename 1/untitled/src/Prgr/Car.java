@@ -20,8 +20,8 @@ enum brandCar{
 private modelCar modelCar;
 private brandCar brandCar;
 
-    public Car(String vin, String dateOfmMnufacture, int prise, int id_owner, int id, Car.modelCar modelCar, Car.brandCar brandCar) {
-        super(vin, dateOfmMnufacture, prise, id_owner, id);
+    public Car(String vin, String dateOfmMnufacture, int prise, int id_owner, Car.modelCar modelCar, Car.brandCar brandCar) {
+        super(vin, dateOfmMnufacture, prise, id_owner);
         this.modelCar = modelCar;
         this.brandCar = brandCar;
     }
@@ -82,10 +82,7 @@ private brandCar brandCar;
         super.setId_owner(id_owner);
     }
 
-    @Override
-    public int getId() {
-        return super.getId();
-    }
+
 
     @Override
     public void setId(int id) {

@@ -19,8 +19,8 @@ public class Truck extends Transport {
     private brandTruck brandTruck;
     private modelTruck modelTruck;
 
-    public Truck(String vin, String dateOfmMnufacture, int prise, int id_owner, int id, Truck.brandTruck brandTruck, Truck.modelTruck modelTruck) {
-        super(vin, dateOfmMnufacture, prise, id_owner, id);
+    public Truck(String vin, String dateOfmMnufacture, int prise, int id_owner, Truck.brandTruck brandTruck, Truck.modelTruck modelTruck) {
+        super(vin, dateOfmMnufacture, prise, id_owner);
         this.brandTruck = brandTruck;
         this.modelTruck = modelTruck;
     }

@@ -21,17 +21,16 @@ public class DataBaseHandlerTransport extends Config{
     }
 
     public void addCar(Car car) {
-        String insert = "INSERT INTO carshowroom.car (id, id_owner, brandCar, modelCar," +
-                "vin,dateOfMnufacture,prise) VALUES(?,?,?,?,?,?,?)";
+        String insert = "INSERT INTO carshowroom.car (id_owner, brandCar, modelCar," +
+                "vin,dateOfMnufacture,prise) VALUES(?,?,?,?,?,?)";
         try {
             preparedStatement = getDbConnection().prepareStatement(insert);
-            preparedStatement.setInt(1, car.getId());
-            preparedStatement.setInt(2,car.getId_owner());
-            preparedStatement.setString(3, car.getBrandCar());
-            preparedStatement.setString(4, car.getModelCar());
-            preparedStatement.setString(5, car.getVin());
-            preparedStatement.setString(6, car.getDateOfmMnufacture());
-            preparedStatement.setInt(7, car.getPrise());
+            preparedStatement.setInt(1,car.getId_owner());
+            preparedStatement.setString(2, String.valueOf(car.getBrandCar()));
+            preparedStatement.setString(3, String.valueOf(car.getModelCar()));
+            preparedStatement.setString(4, car.getVin());
+            preparedStatement.setString(5, car.getDateOfmMnufacture());
+            preparedStatement.setInt(6, car.getPrise());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -39,17 +38,16 @@ public class DataBaseHandlerTransport extends Config{
         }
     }
  public void addTruck(Truck truck) {
-        String insert = "INSERT INTO carshowroom.Truck (id, id_owner, brandTruck, modelTruck," +
-                "vin,dateOfMnufacture,prise) VALUES(?,?,?,?,?,?,?)";
+        String insert = "INSERT INTO carshowroom.Truck (id_owner, brandTruck, modelTruck," +
+                "vin,dateOfMnufacture,prise) VALUES(?,?,?,?,?,?)";
         try {
             preparedStatement = getDbConnection().prepareStatement(insert);
-            preparedStatement.setInt(1, truck.getId());
-            preparedStatement.setInt(2,truck.getId_owner());
-            preparedStatement.setString(3, truck.getBrandTruck());
-            preparedStatement.setString(4, truck.getModelTruck());
-            preparedStatement.setString(5, truck.getVin());
-            preparedStatement.setString(6, truck.getDateOfmMnufacture());
-            preparedStatement.setInt(7, truck.getPrise());
+            preparedStatement.setInt(1,truck.getId_owner());
+            preparedStatement.setString(2, String.valueOf(truck.getBrandTruck()));
+            preparedStatement.setString(3, String.valueOf(truck.getModelTruck()));
+            preparedStatement.setString(4, truck.getVin());
+            preparedStatement.setString(5, truck.getDateOfmMnufacture());
+            preparedStatement.setInt(6, truck.getPrise());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -61,7 +59,7 @@ public class DataBaseHandlerTransport extends Config{
         try{
             getDbConnection();
             stmt = con.createStatement();
-            stmt.executeUpdate("DELETE FROM car WHERE id=6");
+            stmt.executeUpdate("DELETE FROM car WHERE id=4");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

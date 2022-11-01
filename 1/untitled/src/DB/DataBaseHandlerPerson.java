@@ -18,17 +18,16 @@ public class DataBaseHandlerPerson extends Config {
     }
 
     public void signUpUserB(Prgr.Buyer buyer) {
-        String insert = "INSERT INTO carshowroom.buyer (id_buyer, first_name_buyer, midle_name_buyer, last_name_buyer," +
-                "birth_buyer,gender_buyer, phone_number_buyer) VALUES(?,?,?,?,?,?,?)";
+        String insert = "INSERT INTO carshowroom.buyer (first_name_buyer, midle_name_buyer, last_name_buyer," +
+                "birth_buyer,gender_buyer, phone_number_buyer) VALUES(?,?,?,?,?,?)";
         try {
             preparedStatement = getDbConnection().prepareStatement(insert);
-            preparedStatement.setInt(1, buyer.getId());
-            preparedStatement.setString(2, buyer.getFirst_name());
-            preparedStatement.setString(3, buyer.getMiddle_name());
-            preparedStatement.setString(4, buyer.getLast_name());
-            preparedStatement.setString(5, buyer.getBirth());
-            preparedStatement.setString(6, buyer.getGender());
-            preparedStatement.setString(7, buyer.getPhone_number());
+            preparedStatement.setString(1, buyer.getFirst_name());
+            preparedStatement.setString(2, buyer.getMiddle_name());
+            preparedStatement.setString(3, buyer.getLast_name());
+            preparedStatement.setString(4, buyer.getBirth());
+            preparedStatement.setString(5, String.valueOf(buyer.getGender()));
+            preparedStatement.setString(6, buyer.getPhone_number());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -36,17 +35,16 @@ public class DataBaseHandlerPerson extends Config {
         }
     }
     public void signUpUserE(Prgr.Employee employee) {
-        String insert = "INSERT INTO carshowroom.employee (id_employee, first_name_employee, midle_name_employee, last_name_employee," +
-                "birth_employee,gender_employee, phone_number_employee) VALUES(?,?,?,?,?,?,?)";
+        String insert = "INSERT INTO carshowroom.employee (first_name_employee, midle_name_employee, last_name_employee," +
+                "birth_employee,gender_employee, phone_number_employee) VALUES(?,?,?,?,?,?)";
         try {
             preparedStatement = getDbConnection().prepareStatement(insert);
-            preparedStatement.setInt(1, employee.getId());
-            preparedStatement.setString(2, employee.getFirst_name());
-            preparedStatement.setString(3, employee.getMiddle_name());
-            preparedStatement.setString(4, employee.getLast_name());
-            preparedStatement.setString(5, employee.getBirth());
-            preparedStatement.setString(6, employee.getGender());
-            preparedStatement.setString(7, employee.getPhone_number());
+            preparedStatement.setString(1, employee.getFirst_name());
+            preparedStatement.setString(2, employee.getMiddle_name());
+            preparedStatement.setString(3, employee.getLast_name());
+            preparedStatement.setString(4, employee.getBirth());
+            preparedStatement.setString(5, String.valueOf(employee.getGender()));
+            preparedStatement.setString(6, employee.getPhone_number());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -58,7 +56,7 @@ public class DataBaseHandlerPerson extends Config {
         try{
             getDbConnection();
             stmt = con.createStatement();
-            stmt.executeUpdate("DELETE FROM buyer WHERE id_buyer=6");
+            stmt.executeUpdate("DELETE FROM buyer WHERE id_buyer=1");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
