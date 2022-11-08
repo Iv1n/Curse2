@@ -18,7 +18,7 @@
                 <Font size="14.0" />
             </font>
         </Button>
-        <Button fx:id="listSeillBuyer" layoutX="80.0" layoutY="233.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="161.0" text="Проданый авто - владелец" textAlignment="CENTER" wrapText="true">
+        <Button fx:id="listSeillBuyer" layoutX="80.0" layoutY="233.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="161.0" text="Проданый ТС - владелец" textAlignment="CENTER" wrapText="true">
             <font>
                 <Font size="14.0" />
             </font>

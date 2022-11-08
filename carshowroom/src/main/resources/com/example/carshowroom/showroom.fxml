@@ -13,20 +13,40 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="carTable" layoutX="103.0" layoutY="85.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="Автомобили">
+      <Button fx:id="carTable" layoutX="103.0" layoutY="249.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="Автомобили">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button fx:id="TruckTable" layoutX="103.0" layoutY="134.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="Грузовики">
+      <Button fx:id="TruckTable" layoutX="103.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="Грузовики">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button fx:id="allTranportList" layoutX="103.0" layoutY="223.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="таблица всех ТС">
+      <Button fx:id="allTranportList" layoutX="103.0" layoutY="372.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="таблица всех ТС">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
+      <Text fill="WHITE" layoutX="134.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="addCar" layoutX="103.0" layoutY="97.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="Автомобили">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="addTruck" layoutX="103.0" layoutY="141.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="Грузовики">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="129.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="В шоуруме">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

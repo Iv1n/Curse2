@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="840.0" prefWidth="1420.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carshowroom.TableTruck">
+    <children>
+        <TableView prefHeight="813.0" prefWidth="1519.0">
+            <columns>
+                <TableColumn fx:id="idTruck" prefWidth="90.0" text="id" />
+                <TableColumn fx:id="idOwnerTruck" prefWidth="119.0" text="id Владельца" />
+                <TableColumn fx:id="brandTruck" prefWidth="138.0" text="Бренд грузовика" />
+                <TableColumn fx:id="modelTruck" prefWidth="149.0" text="Модель грузовика" />
+                <TableColumn fx:id="vinTruck" minWidth="0.0" prefWidth="144.0" text="vin" />
+                <TableColumn fx:id="dateOfMnufacture" minWidth="3.0" prefWidth="144.0" text="Дата изготовления" />
+                <TableColumn fx:id="prise" minWidth="0.0" prefWidth="75.0" text="Цена" />
+            </columns>
+        </TableView>
+      <Button fx:id="buttonBack" layoutX="31.0" layoutY="814.0" mnemonicParsing="false" text="назад" />
+    </children>
+</AnchorPane>
