@@ -1,15 +1,13 @@
 package com.Prgr;
 
-import java.lang.constant.Constable;
-
 public class Person {
-    enum gender{
+    public enum gender{
         MALE,
         FEMALE
     }
-private String first_name,middle_name, last_name,birth, phone_number;
-private int id;
-private gender gender;
+public String first_name,middle_name, last_name,birth, phone_number;
+public int id;
+public static gender gender;
 
     public Person(String first_name, String middle_name, String last_name, String birth, String phone_number, Person.gender gender) {
         this.first_name = first_name;
@@ -58,14 +56,6 @@ private gender gender;
 
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public Person.gender getGender() {

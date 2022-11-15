@@ -1,6 +1,7 @@
 package com.Prgr;
 import com.DB.DataBaseHandlerPerson;
 import com.DB.DataBaseHandlerTransport;
+import com.example.carshowroom.Buyer;
 
 /*
 Автосалон.
@@ -14,7 +15,7 @@ import com.DB.DataBaseHandlerTransport;
  */
 public class Main {
     public static void main(String[] args) {
-        DataBaseHandlerPerson dbBuyer = new DataBaseHandlerPerson();
+      /* DataBaseHandlerPerson dbBuyer = new DataBaseHandlerPerson();
      Buyer buyer = new Buyer("Oleg","Nikrasov","Ivanovich","2000.10.30","+79155460888", Person.gender.MALE);
      dbBuyer.signUpUserB(buyer);
 
@@ -34,7 +35,7 @@ public class Main {
 
      System.out.println("");
      dbTruck.ConclusionOfTruck();
-
+*/
     }
 
 }

@@ -1,8 +1,25 @@
-package com.Prgr;
+package com.example.carshowroom;
 
-public class Employee extends Person{
-    public Employee(String first_name, String middle_name, String last_name, String birth, String phone_number, int id, String gender) {
+
+import com.Prgr.Person;
+
+public class Buyer extends Person {
+private int id;
+    public Buyer(String first_name, String middle_name, String last_name, String birth, String phone_number, String gender, String string) {
         super(first_name, middle_name, last_name, birth, phone_number, Person.gender.valueOf(gender));
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Buyer(int id, String first_name, String middle_name, String last_name, String birth, String phone_number, String gender) {
+        super(first_name, middle_name, last_name, birth, phone_number, Person.gender.valueOf(gender));
+        this.id = id;
     }
 
     @Override
@@ -55,7 +72,6 @@ public class Employee extends Person{
         super.setPhone_number(phone_number);
     }
 
-
     @Override
     public Person.gender getGender() {
         return super.getGender();
@@ -66,3 +82,4 @@ public class Employee extends Person{
         super.setGender(gender);
     }
 }
+

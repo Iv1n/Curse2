@@ -1,5 +1,8 @@
 package com.DB;
 
+import com.example.carshowroom.Buyer;
+import javafx.collections.ObservableList;
+
 import java.sql.*;
 
 public class DataBaseHandlerPerson extends Config {
@@ -17,7 +20,7 @@ public class DataBaseHandlerPerson extends Config {
         return con;
     }
 
-    public void signUpUserB(com.Prgr.Buyer buyer) {
+    public void signUpUserB(Buyer buyer) {
         String insert = "INSERT INTO carshowroom.buyer (first_name_buyer, midle_name_buyer, last_name_buyer," +
                 "birth_buyer,gender_buyer, phone_number_buyer) VALUES(?,?,?,?,?,?)";
         try {
@@ -121,6 +124,17 @@ public class DataBaseHandlerPerson extends Config {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
+    }
+    public ObservableList<Buyer> data;
+    public ResultSet getBuyer(String data){
+        String getUser="SELECT * FROM carshowroom."+ data;
+        PreparedStatement prSt=null;
+        try{
+            prSt= getDbConnection().prepareStatement(getUser);
+            rs = prSt.executeQuery();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return rs;
     }
 }
