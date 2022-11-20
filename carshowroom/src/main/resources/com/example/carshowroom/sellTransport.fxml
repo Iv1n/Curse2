@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="840.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carshowroom.sellTransport">
+   <children>
+      <Button fx:id="backHub" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" text="Назад" />
+      <Text layoutX="33.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя покупателя :" wrappingWidth="96.05078125" />
+      <Text layoutX="32.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия покупателя :" />
+      <Text layoutX="31.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество покупателя :" />
+      <Text layoutX="33.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения :" wrappingWidth="96.05078125" />
+      <Text layoutX="33.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Пол :" />
+      <Text layoutX="32.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Мобильный телефон :" />
+      <Button fx:id="sell" layoutX="1190.0" layoutY="788.0" mnemonicParsing="false" text="Продать" />
+      <CheckBox fx:id="checkBoxMale" layoutX="71.0" layoutY="195.0" mnemonicParsing="false" selected="true" text="Мужской" />
+      <CheckBox fx:id="checkBoxFemale" layoutX="155.0" layoutY="195.0" mnemonicParsing="false" text="Женский" />
+      <TextField fx:id="first_name_buyer" layoutX="164.0" layoutY="50.0" />
+      <TextField fx:id="midle_name_buyer" layoutX="164.0" layoutY="84.0" />
+      <TextField fx:id="last_name_buyer" layoutX="164.0" layoutY="117.0" />
+      <TextField fx:id="birth_buyer" layoutX="164.0" layoutY="159.0" prefHeight="25.0" prefWidth="196.0" promptText="Введите дату в формате гг-мс-дн" />
+      <TextField fx:id="phone_buyer" layoutX="164.0" layoutY="221.0" />
+      <Text layoutX="598.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите VIN Т/С :" />
+      <Text layoutX="663.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сверьте данные с ПТС!" />
+      <Text fx:id="typeTC" layoutX="598.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тип Т/C :" />
+      <Text fx:id="brandTC" layoutX="598.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Бренд Т/C :" />
+      <Text fx:id="modelTC" layoutX="598.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Модель Т/С :" />
+      <Text fx:id="dateOfManufacture" layoutX="595.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата изготовления :" />
+      <Text fx:id="prise" layoutX="598.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена :" />
+      <Text layoutX="33.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите id менеджера :" />
+      <Text fx:id="first_name_Employee" layoutX="33.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя менеджера :" />
+      <Text fx:id="midle_name_Employee" layoutX="32.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия менеджера :" />
+      <Text fx:id="last_name_Employee" layoutX="31.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество менеджера :" />
+      <Text layoutX="496.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата продажи :" />
+      <TextField fx:id="dateSalle" layoutX="589.0" layoutY="304.0" />
+      <Button fx:id="loadTC" layoutX="878.0" layoutY="72.0" mnemonicParsing="false" text="Загрузить" />
+      <Button fx:id="loadEmployee" layoutX="334.0" layoutY="304.0" mnemonicParsing="false" text="Загрузить" />
+      <ComboBox fx:id="chooseVIN" layoutX="704.0" layoutY="72.0" prefWidth="150.0" />
+      <ComboBox fx:id="chooseId" layoutX="164.0" layoutY="304.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
