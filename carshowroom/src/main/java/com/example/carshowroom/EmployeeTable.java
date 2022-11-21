@@ -51,6 +51,9 @@ public class EmployeeTable {
     private TableColumn<Employee, String> gender;
 
     @FXML
+    private Button UpdateButton;
+
+    @FXML
     private TableColumn<Employee, Integer> idEmployee;
 
     @FXML
@@ -67,14 +70,7 @@ public class EmployeeTable {
     @FXML
     void initialize() {
         dataBase();
-        idEmployee.setCellValueFactory(new PropertyValueFactory<>("id"));
-        firstNameEmployee.setCellValueFactory(new PropertyValueFactory<>("first_name"));
-        midleNameEmployee.setCellValueFactory(new PropertyValueFactory<>("middle_name"));
-        laastNameEmployee.setCellValueFactory(new PropertyValueFactory<>("last_name"));
-        Birth.setCellValueFactory(new PropertyValueFactory<>("birth"));
-        gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
-        phoneNumberEmployee.setCellValueFactory(new PropertyValueFactory<>("phone_number"));
-        Employee.setItems(data);
+        setD();
 
         buttonBack.setOnAction(event -> {
             buttonBack.getScene().getWindow().hide();
@@ -104,7 +100,21 @@ public class EmployeeTable {
             stage.setResizable(false);
             stage.show();
         });
-
+        dellEmployee.setOnAction(event -> {
+            dell();
+            Employee.getItems().clear();
+            setD();
+            dataBase();
+        });
+        UpdateButton.setOnAction(event -> {
+            try {
+                Employee.getItems().clear();
+                setD();
+                dataBase();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
     private void dataBase() {
         ResultSet users= dataBase.getBuyer("employee");
@@ -123,5 +133,26 @@ public class EmployeeTable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+    private void setD(){
+        idEmployee.setCellValueFactory(new PropertyValueFactory<>("id"));
+        firstNameEmployee.setCellValueFactory(new PropertyValueFactory<>("first_name"));
+        midleNameEmployee.setCellValueFactory(new PropertyValueFactory<>("middle_name"));
+        laastNameEmployee.setCellValueFactory(new PropertyValueFactory<>("last_name"));
+        Birth.setCellValueFactory(new PropertyValueFactory<>("birth"));
+        gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        phoneNumberEmployee.setCellValueFactory(new PropertyValueFactory<>("phone_number"));
+        Employee.setItems(data);
+    }
+    private void dell(){
+        Employee employee = Employee.getSelectionModel().getSelectedItem();
+        int id = employee.getId();
+        String str = String.valueOf(id);
+        String Table ="employee";
+        String name = "id_employee";
+        System.out.println(employee.getId());
+        Object selectedItems = Employee.getSelectionModel().getSelectedItems();
+        Employee.getItems().remove(selectedItems);
+        dataBase.delete(Table,str,name);
     }
 }

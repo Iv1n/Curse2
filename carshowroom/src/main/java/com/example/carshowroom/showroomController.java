@@ -2,14 +2,13 @@ package com.example.carshowroom;
         import java.io.IOException;
         import java.net.URL;
         import java.util.ResourceBundle;
-
-        import com.DB.DataBaseHandlerTransport;
         import javafx.fxml.FXML;
         import javafx.fxml.FXMLLoader;
         import javafx.scene.Parent;
         import javafx.scene.Scene;
         import javafx.scene.control.Button;
         import javafx.stage.Stage;
+
 public class showroomController {
 
     @FXML
@@ -20,12 +19,6 @@ public class showroomController {
 
     @FXML
     private Button TruckTable;
-
-    @FXML
-    private Button addCar;
-
-    @FXML
-    private Button addTruck;
 
     @FXML
     private Button allTranportList;
@@ -53,47 +46,48 @@ public class showroomController {
             stage.show();
         });
         carTable.setOnAction(event-> {
-        carTable.getScene().getWindow().hide();
+            carTable.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("tableCar.fxml"));
+            Parent root = null;
             try {
-                loader.load();
+                root = FXMLLoader.load(getClass().getResource("tableCar.fxml"));
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-            Parent root = loader.getRoot();
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
+            stage.setScene(new Scene(root, 1420, 840));
+            stage.setResizable(false);
+            stage.show();
         });
         TruckTable.setOnAction(event-> {
             TruckTable.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("tableTruck.fxml"));
+            Parent root = null;
             try {
-                loader.load();
+                root = FXMLLoader.load(getClass().getResource("tableTruck.fxml"));
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-            Parent root = loader.getRoot();
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
+            stage.setScene(new Scene(root, 1420, 840));
+            stage.setResizable(false);
+            stage.show();
         });
         allTranportList.setOnAction(event-> {
             allTranportList.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("allTransportTable.fxml"));
+            Parent root = null;
             try {
-                loader.load();
+                root = FXMLLoader.load(getClass().getResource("allTransportTable.fxml"));
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
-            Parent root = loader.getRoot();
             Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
+            stage.setScene(new Scene(root, 1420, 840));
+            stage.setResizable(false);
+            stage.show();
         });
     }
-
 }
+
+

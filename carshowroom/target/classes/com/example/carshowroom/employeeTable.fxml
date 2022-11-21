@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="840.0" prefWidth="1420.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carshowroom.EmployeeTable">
     <children>
-        <TableView fx:id="Employee" layoutX="6.0" layoutY="41.0" prefHeight="811.0" prefWidth="1511.0">
+        <TableView fx:id="Employee" layoutY="41.0" prefHeight="811.0" prefWidth="1511.0">
             <columns>
                 <TableColumn fx:id="idEmployee" prefWidth="90.0" text="id" />
                 <TableColumn fx:id="firstNameEmployee" prefWidth="144.0" text="Имя" />
@@ -22,5 +22,6 @@
         <Button fx:id="addEmployee" layoutX="226.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Добавить" />
         <Button fx:id="dellEmployee" layoutX="350.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Удалить" />
         <Button fx:id="changeEmployee" layoutX="487.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Изменить " />
+      <Button fx:id="UpdateButton" layoutX="610.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Обновить" />
     </children>
 </AnchorPane>

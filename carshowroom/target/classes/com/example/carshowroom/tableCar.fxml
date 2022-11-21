@@ -6,18 +6,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="840.0" prefWidth="1420.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carshowroom.TableCar">
-   <children>
-      <TableView prefHeight="811.0" prefWidth="1511.0">
-        <columns>
-          <TableColumn fx:id="idCar" prefWidth="81.0" text="id" />
-          <TableColumn fx:id="idOwnerCar" prefWidth="125.0" text="id Владельца" />
-            <TableColumn fx:id="brandCar" prefWidth="114.0" text="Бренд авто" />
-            <TableColumn fx:id="modelCar" prefWidth="122.0" text="Модель авто" />
-            <TableColumn fx:id="vinCar" minWidth="0.0" prefWidth="153.0" text="vin" />
-            <TableColumn fx:id="dateOfMnufacture" minWidth="3.0" prefWidth="142.0" text="Дата изготовления" />
-            <TableColumn fx:id="prise" minWidth="0.0" prefWidth="140.0" text="Цена" />
-        </columns>
-      </TableView>
-      <Button fx:id="buttonBack" layoutX="14.0" layoutY="811.0" mnemonicParsing="false" text="назад" />
-   </children>
+    <children>
+        <TableView fx:id="Car" layoutY="41.0" prefHeight="811.0" prefWidth="1511.0">
+            <columns>
+                <TableColumn fx:id="idCar" prefWidth="125.0" text="id T/С" />
+                <TableColumn fx:id="brand_car" prefWidth="221.0" text="Бренд Т/С" />
+                <TableColumn fx:id="model_car" minWidth="0.0" prefWidth="211.0" text="Модель Т/С" />
+                <TableColumn fx:id="vin_car" minWidth="0.0" prefWidth="284.0" text="VIN" />
+                <TableColumn fx:id="dateOfManufacture_car" minWidth="0.0" prefWidth="271.0" text="Дата Изготовления Т/С" />
+                <TableColumn fx:id="price_car" prefWidth="398.0" text="Цена" />
+            </columns>
+        </TableView>
+        <Button fx:id="buttonBack" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="назад" />
+        <Button fx:id="addTransport" layoutX="226.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Добавить" />
+        <Button fx:id="dellTransport" layoutX="350.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Удалить" />
+        <Button fx:id="changeTransport" layoutX="487.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Изменить " />
+      <Button fx:id="UpdateButton" layoutX="607.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Обновить" />
+    </children>
 </AnchorPane>

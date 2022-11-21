@@ -17,7 +17,6 @@ public class Employee extends Person {
     }
 
 
-
     public int getId() {
         return id;
     }

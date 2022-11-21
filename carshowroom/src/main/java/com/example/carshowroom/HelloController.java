@@ -56,7 +56,7 @@ public class HelloController {
                 e.printStackTrace();
             }
             Stage stage = new Stage();
-            stage.setScene(new Scene(root, 320, 480));
+            stage.setScene(new Scene(root, 320, 360));
             stage.setResizable(false);
             stage.show();
         });

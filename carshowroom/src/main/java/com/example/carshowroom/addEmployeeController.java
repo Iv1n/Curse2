@@ -58,5 +58,6 @@ public class addEmployeeController {
 
         Employee employee = new Employee(first_name,midle_name,last_name,birh,gender,phone);
         dbHandler.signUpUserE(employee);
+
     }
 }

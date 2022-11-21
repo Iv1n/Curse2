@@ -127,8 +127,6 @@ public class DataBaseHandlerPerson extends Config {
             throw new RuntimeException(e);
         }
     }
-    public ObservableList<Buyer> data;
-
     public ResultSet getBuyer(String data){
         String getUser="SELECT * FROM carshowroom."+ data;
         PreparedStatement prSt=null;
@@ -139,6 +137,15 @@ public class DataBaseHandlerPerson extends Config {
             throw new RuntimeException(e);
         }
         return rs;
+    }
+    public void delete(String Table, String id, String name){
+        try{
+            getDbConnection();
+            stmt = con.createStatement();
+            stmt.executeUpdate("DELETE FROM carshowroom." + Table + " WHERE " + name + "=" + id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
     }
 

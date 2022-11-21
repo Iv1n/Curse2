@@ -9,7 +9,6 @@ import java.util.ResourceBundle;
 import com.DB.DataBaseHandlerPerson;
 import com.DB.DataBaseHandlerTransport;
 import com.Prgr.Person;
-import com.Prgr.Transport;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -182,7 +181,7 @@ ResultSet result = dbHandelr.getTransport(chooseVIN);
         data = FXCollections.observableArrayList();
         c = dbTransport.getDbConnection();
         ResultSet rs = null;
-        String SQL = "SELECT vin FROM carshowroom.transport";
+        String SQL = "SELECT vin FROM carshowroom.transport WHERE id_owner=0";
         try {
             rs = c.createStatement().executeQuery(SQL);
             while (rs.next()){

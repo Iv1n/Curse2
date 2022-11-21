@@ -107,17 +107,19 @@ public class BuyerTable {
 
         updateButton.setOnAction(event -> {
             try {
-                id_buyer.getColumns().clear();
-                first_name_buyer.getColumns().clear();
-                midle_name_buyer.getColumns().clear();
-                last_name_buyer.getColumns().clear();
-                birth_buyer.getColumns().clear();
-                gender_buyer.getColumns().clear();
-                phone_buyer.getColumns().clear();
+                Buyer.getItems().clear();
                 setD();
-            } catch (Exception exc) {
-                exc.printStackTrace();
+                dataBase();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
+        });
+
+        dellBuyer.setOnAction(event -> {
+            Delete();
+            Buyer.getItems().clear();
+            setD();
+            dataBase();
         });
     }
     private void setD(){
@@ -131,6 +133,15 @@ public class BuyerTable {
         Buyer.setItems(data);
     }
     private void Delete(){
+        Buyer buyer = Buyer.getSelectionModel().getSelectedItem();
+        int id = buyer.getId();
+        String str = String.valueOf(id);
+        String Table ="buyer";
+        String name = "id_buyer";
+        System.out.println(buyer.getId());
+        Object selectedItems = Buyer.getSelectionModel().getSelectedItems();
+        Buyer.getItems().remove(selectedItems);
+        dataBase.delete(Table,str,name);
     }
 
     private void dataBase() {
