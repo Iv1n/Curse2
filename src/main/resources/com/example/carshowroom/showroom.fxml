@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="320.0" style="-fx-background-color: #212f3d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carshowroom.showroomController">
+   <children>
+      <Button fx:id="backHub" layoutX="14.0" layoutY="307.0" mnemonicParsing="false" text="назад" />
+      <Text fill="WHITE" layoutX="124.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Шоурум">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="carTable" layoutX="103.0" layoutY="75.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="Автомобили">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="TruckTable" layoutX="103.0" layoutY="135.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="133.0" text="Грузовики">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="allTranportList" layoutX="103.0" layoutY="223.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="таблица всех ТС">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

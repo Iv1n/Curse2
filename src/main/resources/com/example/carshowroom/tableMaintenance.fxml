@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="582.0" prefWidth="1118.0" style="-fx-background-color: #212f3d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carshowroom.TableMaintenance">
+    <children>
+        <TableView fx:id="table" layoutY="35.0" prefHeight="549.0" prefWidth="1118.0">
+            <columns>
+                <TableColumn fx:id="idOwner" prefWidth="141.0" text="id Владельца" />
+                <TableColumn fx:id="idTC" prefWidth="132.0" text="id ТС" />
+                <TableColumn fx:id="typeTC" prefWidth="137.0" text="Тип ТС" />
+                <TableColumn fx:id="brendTC" minWidth="0.0" prefWidth="157.0" text="Бренд ТС" />
+                <TableColumn fx:id="modelTC" minWidth="3.0" prefWidth="151.0" text="Модель ТС" />
+                <TableColumn fx:id="vinTC" prefWidth="193.0" text="vin" />
+                <TableColumn fx:id="dateOfManufactureTC" prefWidth="206.0" text="Дата Производства" />
+            </columns>
+        </TableView>
+        <Button fx:id="buttonBack" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" text="назад" />
+    </children>
+</AnchorPane>
